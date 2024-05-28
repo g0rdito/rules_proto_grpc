@@ -59,10 +59,12 @@ crates_vendor(
             version = "0.8.5",
         ),
         "tokio": crate.spec(
-            version = "1.24.2",
+            features = ["rt-multi-thread"],
+            version = "1.37.0",
         ),
         "tokio-stream": crate.spec(
-            version = "0.1.11",
+            features = ["net"],
+            version = "0.1.15",
         ),
         "async-stream": crate.spec(
             version = "0.3.3",
@@ -77,6 +79,29 @@ crates_vendor(
         ),
         "pbjson": crate.spec(
             version = "0.5.1",
+        ),
+        "actix-web": crate.spec(
+            features = ["default","secure-cookies"],
+            version = "4.3.0",
+        ),
+        "actix-web-actors": crate.spec(
+            version = "4.3.0",
+        ),
+        "juniper": crate.spec(
+            version = "0.16.1",
+        ),
+        "tokio-postgres": crate.spec(
+            version = "0.7.10",
+        ),
+        "tower": crate.spec(
+            features = ["util"],
+            version = "0.4.13",
+        ),
+        "tower-service": crate.spec(
+            version = "0.3.2",
+        ),
+        "testcontainers": crate.spec(
+            version = "0.15.0",
         ),
     },
     repository_name = "rules_proto_grpc_rust",
