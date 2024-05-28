@@ -26,6 +26,18 @@ filegroup(
 
 # Workspace Member Dependencies
 alias(
+    name = "actix-web",
+    actual = "@rules_proto_grpc_rust__actix-web-4.5.1//:actix_web",
+    tags = ["manual"],
+)
+
+alias(
+    name = "actix-web-actors",
+    actual = "@rules_proto_grpc_rust__actix-web-actors-4.3.0//:actix_web_actors",
+    tags = ["manual"],
+)
+
+alias(
     name = "async-stream",
     actual = "@rules_proto_grpc_rust__async-stream-0.3.5//:async_stream",
     tags = ["manual"],
@@ -33,7 +45,13 @@ alias(
 
 alias(
     name = "futures",
-    actual = "@rules_proto_grpc_rust__futures-0.3.28//:futures",
+    actual = "@rules_proto_grpc_rust__futures-0.3.30//:futures",
+    tags = ["manual"],
+)
+
+alias(
+    name = "juniper",
+    actual = "@rules_proto_grpc_rust__juniper-0.16.1//:juniper",
     tags = ["manual"],
 )
 
@@ -69,7 +87,7 @@ alias(
 
 alias(
     name = "protoc-gen-prost",
-    actual = "@rules_proto_grpc_rust__protoc-gen-prost-0.2.2//:protoc_gen_prost",
+    actual = "@rules_proto_grpc_rust__protoc-gen-prost-0.2.3//:protoc_gen_prost",
     tags = ["manual"],
 )
 
@@ -99,25 +117,31 @@ alias(
 
 alias(
     name = "serde",
-    actual = "@rules_proto_grpc_rust__serde-1.0.163//:serde",
+    actual = "@rules_proto_grpc_rust__serde-1.0.199//:serde",
     tags = ["manual"],
 )
 
 alias(
     name = "serde_json",
-    actual = "@rules_proto_grpc_rust__serde_json-1.0.96//:serde_json",
+    actual = "@rules_proto_grpc_rust__serde_json-1.0.116//:serde_json",
     tags = ["manual"],
 )
 
 alias(
     name = "tokio",
-    actual = "@rules_proto_grpc_rust__tokio-1.28.2//:tokio",
+    actual = "@rules_proto_grpc_rust__tokio-1.37.0//:tokio",
+    tags = ["manual"],
+)
+
+alias(
+    name = "tokio-postgres",
+    actual = "@rules_proto_grpc_rust__tokio-postgres-0.7.10//:tokio_postgres",
     tags = ["manual"],
 )
 
 alias(
     name = "tokio-stream",
-    actual = "@rules_proto_grpc_rust__tokio-stream-0.1.14//:tokio_stream",
+    actual = "@rules_proto_grpc_rust__tokio-stream-0.1.15//:tokio_stream",
     tags = ["manual"],
 )
 
@@ -133,10 +157,46 @@ alias(
     tags = ["manual"],
 )
 
+alias(
+    name = "tower",
+    actual = "@rules_proto_grpc_rust__tower-0.4.13//:tower",
+    tags = ["manual"],
+)
+
+alias(
+    name = "tower-service",
+    actual = "@rules_proto_grpc_rust__tower-service-0.3.2//:tower_service",
+    tags = ["manual"],
+)
+
 # Binaries
 alias(
-    name = "cc__gcc-shim",
-    actual = "@rules_proto_grpc_rust__cc-1.0.79//:gcc-shim__bin",
+    name = "alloc-no-stdlib__example",
+    actual = "@rules_proto_grpc_rust__alloc-no-stdlib-2.0.4//:example__bin",
+    tags = ["manual"],
+)
+
+alias(
+    name = "alloc-stdlib__example",
+    actual = "@rules_proto_grpc_rust__alloc-stdlib-0.2.2//:example__bin",
+    tags = ["manual"],
+)
+
+alias(
+    name = "brotli__brotli",
+    actual = "@rules_proto_grpc_rust__brotli-3.5.0//:brotli__bin",
+    tags = ["manual"],
+)
+
+alias(
+    name = "brotli__catbrotli",
+    actual = "@rules_proto_grpc_rust__brotli-3.5.0//:catbrotli__bin",
+    tags = ["manual"],
+)
+
+alias(
+    name = "brotli-decompressor__brotli-decompressor",
+    actual = "@rules_proto_grpc_rust__brotli-decompressor-2.5.1//:brotli-decompressor__bin",
     tags = ["manual"],
 )
 
@@ -147,8 +207,8 @@ alias(
 )
 
 alias(
-    name = "protoc-gen-prost-0.2.2__protoc-gen-prost",
-    actual = "@rules_proto_grpc_rust__protoc-gen-prost-0.2.2//:protoc-gen-prost__bin",
+    name = "protoc-gen-prost-0.2.3__protoc-gen-prost",
+    actual = "@rules_proto_grpc_rust__protoc-gen-prost-0.2.3//:protoc-gen-prost__bin",
     tags = ["manual"],
 )
 
